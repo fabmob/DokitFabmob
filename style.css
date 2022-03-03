@@ -171,14 +171,6 @@ body.rootpage-Event #bodyContent .container {
     background-image: linear-gradient(#fff,#eee);
 }
 
-.FabmobFooter {
-    background: #58585a;
-    color: #fff;
-    padding: 50px 15px;
-    float:left;
-    width:100%;
-}
-
 .responsive-img img {
     width: 100%;
     height: 100%;
@@ -558,6 +550,27 @@ width: calc(100% - 166px);
 
 /* EXPLORER FILTER STYLE */
 
+#wfExplore-wfe2 {
+	margin: 0 -15px;
+}
+
+#wfExplore-wfe2 .WfFormTree {
+	max-height: 300px;
+}
+
+#wfExplore-wfe2 span.dynatree-connector,
+#wfExplore-wfe2 span.dynatree-icon {
+	display: none;
+}
+
+#wfExplore-wfe2 span.dynatree-checkbox {
+	margin-top: 3px;
+	vertical-align: middle;
+}
+
+#wfExplore-wfe2 span.dynatree-node a {
+	font-size: initial;
+}
 
 .search-section {
     padding: 12px 0px;
@@ -567,6 +580,16 @@ width: calc(100% - 166px);
     color: #368aa9;
     text-align: center;
     background-color: #fff;
+}
+
+.search-section a,
+.search-section a:visited {
+    color: #368aa9;
+}
+
+.search-section a:hover,
+.search-section a:focus {
+    color: #10345a;
 }
 
 .mw-body .WFfilter ul.nav-pills {
@@ -697,6 +720,7 @@ body.rootpage-Event .mw-body .WFfilter label {
 .search-filters-section.wfexplore-proposedTags .label-default {
     background-color: #368aa9;
     background-position: center;
+    color: #fff;
     font-weight: normal;
     font-size: 100%;
     padding: 12px 9px;

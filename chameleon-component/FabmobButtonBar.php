@@ -28,15 +28,12 @@ class FabmobButtonBar extends Component {
 	 * @return string
 	 */
 	public function getHtml() {
-
-		$newTutoPageTitle = \Title::makeTitle( SF_NS_FORM, ''. wfMessage( 'wfTopButton-Tutorial' )->text() .'');
-
 		$pageNewRessource = \Title::makeTitle( NS_MAIN, 'Créer_une_ressource');
 		$ret = $this->indent() . '<!-- new Ressource button -->' .
 			$this->indent( 1 ) . '<div class="wf-top-button">' .
 			$this->indent() . '<a href="' . $pageNewRessource->getLinkURL() . '">' .
 			$this->indent() . '<button class="btn" aria-label="Créer une ressource" title="Créer_une_ressource">' .
-			$this->indent() . '<span class="glyphicon glyphicon-pencil"></span>Créer  ressource</button>' .
+			$this->indent() . '<span class="fas fa-pencil-alt"></span>Créer ressource</button>' .
 			$this->indent() . '</a>' .
 			$this->indent( -1 ) . '</div>' . "\n".
 		    $this->indent() . '<!-- end new Ressource button -->' ;

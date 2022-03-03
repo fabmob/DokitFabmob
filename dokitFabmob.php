@@ -13,7 +13,7 @@ $wgResourceModules['ext.DokitFabmob.js'] = array(
 	'messages' => array(
 	),
 	'dependencies' => array(
-			'jquery.ui.core'
+		'jquery.ui'
 	),
 	'position' => 'bottom',
 	'localBasePath' => __DIR__ . '',
@@ -27,7 +27,7 @@ function dokitFabmobBeforePageDisplay( $out, $skin ) {
 
 	$out->addModuleStyles(
 		array(
-				'ext.DokitFabmob.css'
+			'ext.DokitFabmob.css'
 		)
 	);
 	$out->addModules( array( 'ext.DokitFabmob.js' ) );
@@ -37,7 +37,5 @@ function dokitFabmobBeforePageDisplay( $out, $skin ) {
 
 $wgHooks['BeforePageDisplay'][] = 'dokitFabmobBeforePageDisplay';
 
-$wgAutoloadClasses['Skins\\Chameleon\\Components\\FabmobNavbarHorizontal'] = __DIR__ . "/chameleon-component/FabmobNavbarHorizontal.php";
 $wgAutoloadClasses['Skins\\Chameleon\\Components\\FabmobFooter'] = __DIR__ . "/chameleon-component/FabmobFooter.php";
 $wgAutoloadClasses['Skins\\Chameleon\\Components\\FabmobButtonBar'] = __DIR__ . "/chameleon-component/FabmobButtonBar.php";
-

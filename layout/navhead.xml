@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-<?xml-model href="https://cmln.github.io/chameleon/schema/1.0/layout.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://ProfessionalWiki.github.io/chameleon/schema/1.0/layout.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 This file is part of the MediaWiki skin Chameleon.
 
-@copyright 2013 - 2016, Stephan Gambke
+@copyright 2013 - 2019, Stephan Gambke
 @license   GNU General Public License, version 3 (or any later version)
 
 The Chameleon skin is free software: you can redistribute it and/or modify it
@@ -23,48 +23,49 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 @since 1.0
 @ingroup Skins
 -->
-<structure xmlns="https://cmln.github.io/chameleon/schema/1.0/layout.rng">
-		
-	<component type="FabmobNavbarHorizontal">
-			<component type="Logo" position="head"/>
-			<component type="NavMenu" flatten="navigation" showTools="no" showLanguages="no"/>
-			<component type="FabmobButtonBar" position="right"></component>
-			<component type="PageTools" position="right" hideSelectedNameSpace="yes"/>
-			<component type="SearchBar" position="right"/>
-			<component type="PersonalTools" position="right"/>
+<structure xmlns="https://ProfessionalWiki.github.io/chameleon/schema/3.0/layout.rng">
+	<component type="NavbarHorizontal">
+		<component type="Logo" position="head"/>
+		<component type="NavMenu" flatten="navigation" />
+		<component type="FabmobButtonBar" position="right"></component>
+		<component type="Menu" message="secondary-menu"/>
+		<component type="PageTools" class="flex-row" position="right" hideSelectedNameSpace="yes"/>
+		<component type="SearchBar" class="order-first order-cmln-0" position="right" buttons="go"/>
+		<component type="PersonalTools" position="right"/>
 	</component>
 
-	<grid>
+	<grid class="flex-fill">
 		<row>
-			<cell span="12">
+			<cell>
 				<component type="SiteNotice"/>
 			</cell>
 		</row>
 
 		<row>
-			<cell span="12">
+			<cell>
 				<component type="MainContent"/>
 			</cell>
 		</row>
-		<row>
-			<cell span="12">
-				<component type="ToolbarHorizontal" hideTools="no" hideLanguages="no"/>
-			</cell>
-		</row>	
-</grid>
+	</grid>
 
-<component class="footer-main">
-		<component type="FooterInfo"/>
-		<component type="FabmobFooter"/>
-		<grid>
-				<row>
-					<cell span="6">
-						<component type="FooterPlaces"/>
-					</cell>
-					<cell span="6">
-						<component type="FooterIcons"/>
-					</cell>
-				</row>
-		</grid>
-</component>
+	<grid class="mb-2 mt-4" mode="fluid">
+		<row>
+			<cell>
+				<component type="NavbarHorizontal" collapsible="no" class="small mb-2" >
+					<component type="Toolbox" flatten="no" class="dropup"/>
+					<component type="LangLinks" flatten="no" class="dropup"/>
+				</component>
+			</cell>
+		</row>
+
+		<row>
+			<cell>
+				<component type="FooterInfo"/>
+				<component type="FooterPlaces"/>
+			</cell>
+			<cell>
+				<component type="FooterIcons" class="justify-content-end"/>
+			</cell>
+		</row>
+	</grid>
 </structure>

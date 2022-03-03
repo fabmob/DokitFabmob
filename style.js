@@ -1,17 +1,13 @@
-
 jQuery( document ).ready( function() {
-	console.log('init fabmob');
-	
 	function displayModal() {
 		$( "#connectionRequiredModal" ).modal();
 	}
 
 	$('.btn-message').click(function() {
-		if (typeof wgUserId == 'undefined') {
+		if (mw.config.get( 'wgUserId' ) === null) {
 			displayModal();
 			return false;
 		}
 		return true;
 	});
-	
 } );

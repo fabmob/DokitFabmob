@@ -385,7 +385,7 @@ class FabmobNavbarHorizontal extends Component {
 		$personnalsToolsWidgets = [
 //				"notifications-alert",
 				"notifications-notice",
-		        "social-message-link",
+				"social-message-link",
 				"uls",
 				"language",
 		];
@@ -559,7 +559,7 @@ class FabmobNavbarHorizontal extends Component {
 		$options = array (
 			'text-wrapper' => array(
 				'tag' => 'span',
-				'attributes' => array('class' => 'glyphicon glyphicon-pencil',)
+				'attributes' => array('class' => 'fas fa-pencil-alt',)
 			),
 		);
 
