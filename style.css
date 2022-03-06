@@ -19,18 +19,34 @@ body.rootpage-Event .footer-main .container {
     max-width: 1170px;
  }
 
- .profile-update-unit ul.CheckboxTree:first-child {
+#profile-update-custom13 .profile-update-unit {
+    width: auto;
+}
+
+.profile-update-unit ul.CheckboxTree {
+    padding-left: 30px;
+}
+
+.profile-update-unit > ul.CheckboxTree {
     list-style: none;
     padding-left: 0px;
- }
+}
 
-  .profile-update-unit ul.CheckboxTree i {
-    font-size: 0.90em;
+.profile-update-unit ul.CheckboxTree li {
+    margin-bottom: 0;
+}
+
+.profile-update-unit ul.CheckboxTree i {
+    font-size: 1em;
     color: #aaa;
-    margin-right: 3px;
-    vertical-align: text-bottom;
+    padding: 0 17px 0 3px;
+    vertical-align: middle;
     cursor: pointer;
- }
+}
+
+.profile-update-unit ul.CheckboxTree i.down-arrow {
+    padding: 0 16px 0 0;
+}
 
 .profile-update-unit ul li label input[type="checkbox"] {
      margin-right: 5px;
