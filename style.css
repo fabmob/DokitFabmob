@@ -161,7 +161,7 @@ body.rootpage-Event #bodyContent .container {
     color: #337ab7;
 }
 
-#wpPreview, #wpDiff, #wpSave, .site-button, .multipleTemplateAdder {
+.site-button, .multipleTemplateAdder {
     background-color: #80deff;
     border: 1px solid #000 !important;
     color: #000;
